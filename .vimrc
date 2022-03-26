@@ -21,21 +21,21 @@
 " :PlugClean
 
 call plug#begin()
-    Plug 'https://hub.fastgit.org/preservim/nerdtree'
-    Plug 'https://hub.fastgit.org/preservim/nerdcommenter'
-    Plug 'https://hub.fastgit.org/junegunn/fzf'
-    Plug 'https://hub.fastgit.org/junegunn/limelight.vim'
-    Plug 'https://hub.fastgit.org/vim-airline/vim-airline'
-    Plug 'https://hub.fastgit.org/vim-airline/vim-airline-themes'
-    Plug 'https://hub.fastgit.org/justinmk/vim-sneak'
-    Plug 'https://hub.fastgit.org/terryma/vim-multiple-cursors'
-    Plug 'https://hub.fastgit.org/terryma/vim-expand-region'
-    Plug 'https://hub.fastgit.org/terryma/vim-smooth-scroll'
-    Plug 'https://hub.fastgit.org/mileszs/ack.vim'
-    Plug 'https://hub.fastgit.org/luochen1990/rainbow'
-    Plug 'https://hub.fastgit.org/altercation/vim-colors-solarized'
-    Plug 'https://hub.fastgit.org/morhetz/gruvbox'
-    Plug 'https://hub.fastgit.org/SWang-FD/vim-one'
+    Plug 'https://hub.gitfast.tk/preservim/nerdtree'
+    Plug 'https://hub.gitfast.tk/preservim/nerdcommenter'
+    Plug 'https://hub.gitfast.tk/junegunn/fzf'
+    Plug 'https://hub.gitfast.tk/junegunn/limelight.vim'
+    Plug 'https://hub.gitfast.tk/vim-airline/vim-airline'
+    Plug 'https://hub.gitfast.tk/vim-airline/vim-airline-themes'
+    Plug 'https://hub.gitfast.tk/justinmk/vim-sneak'
+    Plug 'https://hub.gitfast.tk/terryma/vim-multiple-cursors'
+    Plug 'https://hub.gitfast.tk/terryma/vim-expand-region'
+    Plug 'https://hub.gitfast.tk/terryma/vim-smooth-scroll'
+    Plug 'https://hub.gitfast.tk/mileszs/ack.vim'
+    Plug 'https://hub.gitfast.tk/luochen1990/rainbow'
+    Plug 'https://hub.gitfast.tk/altercation/vim-colors-solarized'
+    Plug 'https://hub.gitfast.tk/morhetz/gruvbox'
+    Plug 'https://hub.gitfast.tk/SWang-FD/vim-one'
 call plug#end()
 " ////////////////////////////////////////////////////
 
