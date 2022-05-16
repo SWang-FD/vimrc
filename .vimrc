@@ -36,6 +36,8 @@ call plug#begin()
     Plug 'https://hub.gitfast.tk/altercation/vim-colors-solarized'
     Plug 'https://hub.gitfast.tk/morhetz/gruvbox'
     Plug 'https://hub.gitfast.tk/SWang-FD/vim-one'
+    Plug 'https://hub.gitfast.tk/SWang-FD/vim-scala'
+    Plug 'https://hub.gitfast.tk/SWang-FD/vim-chisel'
 call plug#end()
 " ////////////////////////////////////////////////////
 
