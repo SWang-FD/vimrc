@@ -21,26 +21,26 @@
 " :PlugClean
 
 call plug#begin()
-    Plug 'https://hub.gitfast.tk/preservim/nerdtree'
-    Plug 'https://hub.gitfast.tk/preservim/nerdcommenter'
-    Plug 'https://hub.gitfast.tk/junegunn/fzf'
-    Plug 'https://hub.gitfast.tk/junegunn/limelight.vim'
-    Plug 'https://hub.gitfast.tk/vim-airline/vim-airline'
-    Plug 'https://hub.gitfast.tk/vim-airline/vim-airline-themes'
-    Plug 'https://hub.gitfast.tk/justinmk/vim-sneak'
-    Plug 'https://hub.gitfast.tk/terryma/vim-multiple-cursors'
-    Plug 'https://hub.gitfast.tk/terryma/vim-expand-region'
-    Plug 'https://hub.gitfast.tk/terryma/vim-smooth-scroll'
-    Plug 'https://hub.gitfast.tk/mileszs/ack.vim'
-    Plug 'https://hub.gitfast.tk/luochen1990/rainbow'
-    Plug 'https://hub.gitfast.tk/altercation/vim-colors-solarized'
-    Plug 'https://hub.gitfast.tk/morhetz/gruvbox'
+    Plug 'https://hub.gitfast.tk/SWang-FD/nerdtree'
+    Plug 'https://hub.gitfast.tk/SWang-FD/nerdcommenter'
+    Plug 'https://hub.gitfast.tk/SWang-FD/fzf'
+    Plug 'https://hub.gitfast.tk/SWang-FD/limelight.vim'
+    Plug 'https://hub.gitfast.tk/SWang-FD-airline/vim-airline'
+    Plug 'https://hub.gitfast.tk/SWang-FD-airline/vim-airline-themes'
+    Plug 'https://hub.gitfast.tk/SWang-FD/vim-sneak'
+    Plug 'https://hub.gitfast.tk/SWang-FD/vim-multiple-cursors'
+    Plug 'https://hub.gitfast.tk/SWang-FD/vim-expand-region'
+    Plug 'https://hub.gitfast.tk/SWang-FD/vim-smooth-scroll'
+    Plug 'https://hub.gitfast.tk/SWang-FD/ack.vim'
+    Plug 'https://hub.gitfast.tk/SWang-FD/rainbow'
+    Plug 'https://hub.gitfast.tk/SWang-FD/vim-colors-solarized'
+    Plug 'https://hub.gitfast.tk/SWang-FD/gruvbox'
     Plug 'https://hub.gitfast.tk/SWang-FD/vim-one'
     Plug 'https://hub.gitfast.tk/SWang-FD/vim-scala'
     Plug 'https://hub.gitfast.tk/SWang-FD/vim-chisel'
 call plug#end()
 " ////////////////////////////////////////////////////
-
+set laststatus=2 "1为关闭底部状态栏 2为开启"
 set t_Co=256
 syntax enable
 let g:solarized_termcolors=256
@@ -50,14 +50,6 @@ let github = 0
 let guardian2 = 0
 let molokai = 0
 
-if (empty($TMUX))
-  if (has("nvim"))
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-endif
 
 " ////////////////////////////////////////////////////
 " /////                 Themes                  //////
@@ -119,6 +111,7 @@ nmap <silent> <C-f>    :call smooth_scroll#down(4, 10, 2)<CR>
 " Alt + n : switch to buffer n
 " Alt + c : close current buffer
 " Alt + l : list all buffers
+nmap <tab> :bn<cr>
 map <A-1> 1gt 
 map <A-2> 2gt 
 map <A-3> 3gt 
@@ -138,11 +131,33 @@ map <silent> <A-l> :tabs<CR>
 filetype plugin on
 let g:rainbow_active = 1
 " let g:airline_theme='bubblegum'
-let g:airline_theme='one'
+" let g:airline_theme='one'
+let g:airline_theme='onedark'
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+" powerline symbols
+let g:airline_powerline_fonts = 1
+
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.colnr = ' :'
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ' :'
+let g:airline_symbols.maxlinenr = '☰ '
+let g:airline_symbols.dirty='⚡'
+
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#right_alt_sep = ''
+" set ambiwidth=double "防止特殊符号无法正常显示
+
 set autochdir
 set showcmd
 set completeopt=preview,menu
@@ -160,13 +175,13 @@ set showmatch
 set matchtime=1
 
 winpos 0 0
-set lines=53 columns=189
+set lines=60 columns=120
 autocmd GUIEnter * simalt ~x
 
 set cursorline
 set showmatch
   
-set guifont=DejaVu\ Sans\ mono\ 12  " font
+set guifont=DejaVu\ Sans\ mono\ for\ Powerline\ 12  " font
 set langmenu=en_US         " menu language
 let $LANG='en_US'          " language
 
@@ -790,3 +805,4 @@ hi link htmlH6 htmlH5
 endif
 " And finally.
 "/////////////////////////////////////////////////////////////
+
