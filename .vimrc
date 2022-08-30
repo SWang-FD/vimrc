@@ -25,8 +25,8 @@ call plug#begin()
     Plug 'https://hub.gitfast.tk/SWang-FD/nerdcommenter'
     Plug 'https://hub.gitfast.tk/SWang-FD/fzf'
     Plug 'https://hub.gitfast.tk/SWang-FD/limelight.vim'
-    Plug 'https://hub.gitfast.tk/SWang-FD-airline/vim-airline'
-    Plug 'https://hub.gitfast.tk/SWang-FD-airline/vim-airline-themes'
+    Plug 'https://hub.gitfast.tk/SWang-FD/vim-airline'
+    Plug 'https://hub.gitfast.tk/SWang-FD/vim-airline-themes'
     Plug 'https://hub.gitfast.tk/SWang-FD/vim-sneak'
     Plug 'https://hub.gitfast.tk/SWang-FD/vim-multiple-cursors'
     Plug 'https://hub.gitfast.tk/SWang-FD/vim-expand-region'
@@ -40,7 +40,7 @@ call plug#begin()
     Plug 'https://hub.gitfast.tk/SWang-FD/vim-chisel'
 call plug#end()
 " ////////////////////////////////////////////////////
-set laststatus=2 "1为关闭底部状态栏 2为开启"
+set laststatus=2 
 set t_Co=256
 syntax enable
 let g:solarized_termcolors=256
@@ -156,7 +156,7 @@ let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#right_sep = ''
 let g:airline#extensions#tabline#right_alt_sep = ''
-" set ambiwidth=double "防止特殊符号无法正常显示
+
 
 set autochdir
 set showcmd
